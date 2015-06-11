@@ -1,5 +1,5 @@
 ## SublimeGoogle
-A plugin that makes searching for errors easy.
+This plugin gives a chrome like "Search Google for ''" option on right click.
 
 ### Installation
 Download and extract to your packages folder. (`Menu` &#10153; `Preferences` &#10153; `Browse Packages`)

@@ -1,6 +1,10 @@
 ## SublimeGoogle
 This plugin gives a chrome like `Search Google for 'query'` option on right click.
 
+Like this:
+
+![](http://i.imgur.com/1J96RKI.png)
+
 ### Installation
 Download and extract to your packages folder. (`Menu` &#10153; `Preferences` &#10153; `Browse Packages`)
 

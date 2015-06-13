@@ -3,7 +3,7 @@ This plugin gives a chrome like `Search Google for 'query'` option on right clic
 
 Like this:
 
-![](http://i.imgur.com/1J96RKI.png)
+![](http://i.imgur.com/7JMfKqI.png)
 
 ### Installation
 Download and extract to your packages folder. (`Menu` &#10153; `Preferences` &#10153; `Browse Packages`)

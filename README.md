@@ -1,5 +1,6 @@
 ## SublimeSearch
 This plugin gives a chrome like `Search Google for 'query'` option on right click.
+
 Added other search engines now.
 
 Like this:

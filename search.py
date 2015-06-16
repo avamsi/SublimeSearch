@@ -10,13 +10,11 @@ url = {
     'Yahoo': 'https://search.yahoo.com/search?p='
 }
 
-def plugin_loaded():
-    global search_engine
-    settings = sublime.load_settings('Search.sublime-settings')
-    search_engine = settings.get('search_engine', 'Google')
-
-class SearchCommand(sublime_plugin.TextCommand):
+class WebSearchCommand(sublime_plugin.TextCommand):
     def run(self, edit):
+        global search_engine
+        settings = sublime.load_settings('Search.sublime-settings')
+        search_engine = settings.get('search_engine', 'Google')
         text = self.get_text()
         webbrowser.open_new_tab(
             url[search_engine] + text

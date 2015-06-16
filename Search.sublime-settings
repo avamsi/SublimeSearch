@@ -1,0 +1,5 @@
+// save settings to Search - User settings
+// available options: "Bing", "DuckDuckGo", "Google", "Yahoo"
+{
+    "search_engine": "Google"
+}

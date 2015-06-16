@@ -1,7 +1,8 @@
 import sublime, sublime_plugin
 import webbrowser
 
-search_engine = None
+settings = sublime.load_settings('Search.sublime-settings')
+search_engine = settings.get('search_engine', 'Google')
 
 url = {
     'Bing': 'https://www.bing.com/search?q=',
@@ -12,9 +13,6 @@ url = {
 
 class WebSearchCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        global search_engine
-        settings = sublime.load_settings('Search.sublime-settings')
-        search_engine = settings.get('search_engine', 'Google')
         text = self.get_text()
         webbrowser.open_new_tab(
             url[search_engine] + text

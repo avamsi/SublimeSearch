@@ -5,7 +5,7 @@ Like this:
 
 ![](http://i.imgur.com/7JMfKqI.png)
 
-\- Added other search engines now.
+- Added other search engines now.
 
 ### Installation
 Download and extract to your packages folder. (`Menu` &#10153; `Preferences` &#10153; `Browse Packages`)

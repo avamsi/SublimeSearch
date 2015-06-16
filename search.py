@@ -1,11 +1,25 @@
 import sublime, sublime_plugin
 import webbrowser
 
-class GoogleSearchCommand(sublime_plugin.TextCommand):
+search_engine = None
+
+url = {
+    'Bing': 'https://www.bing.com/search?q=',
+    'DuckDuckGo': 'https://duckduckgo.com/?q=',
+    'Google': 'https://www.google.com/search?q=',
+    'Yahoo': 'https://search.yahoo.com/search?p='
+}
+
+def plugin_loaded():
+    global search_engine
+    settings = sublime.load_settings('Search.sublime-settings')
+    search_engine = settings.get('search_engine', 'Google')
+
+class SearchCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         text = self.get_text()
         webbrowser.open_new_tab(
-            'https://www.google.com/search?q=' + text
+            url[search_engine] + text
         )
 
     def is_visible(self):
@@ -17,7 +31,7 @@ class GoogleSearchCommand(sublime_plugin.TextCommand):
         return self.view.substr(reg).strip()
 
     def description(self):
-        text = self.get_text()
-        if len(text) > 16:
-            text = text[0: 16] + '...'
-        return "Search Google for '" + text + "'"
+        text = "%s for '%s'" % (search_engine, self.get_text())
+        if len(text) > 32:
+            text = text[0: 32] + '...'
+        return 'Search ' + text
